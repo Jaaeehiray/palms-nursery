@@ -1,0 +1,42 @@
+.map-section{
+    padding:50px 10%;
+    background:#bce5b58e;
+}
+
+.map-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.map-title h4{
+    color:#2E7D32;
+    margin-bottom:10px;
+}
+
+.map-title h2{
+    color:#511d1d;
+    font-size:40px;
+    font-weight:550;
+}
+
+.map-container{
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.map-container iframe{
+    display:block;
+}
+
+@media(max-width:768px){
+
+.map-section{
+padding:30px 60px;
+}
+
+.map-title h2{
+font-size:30px;
+}
+
+}
