@@ -29,9 +29,9 @@ const handleSubmit = async (e) => {
 
   try {
     const response = await axios.post(
-      "http://localhost:5000/api/inquiries",
-      formData
-    );
+  "https://palms-backend-wk2r.onrender.com/api/inquiries",
+  formData
+);
 
     alert(response.data.message);
 
