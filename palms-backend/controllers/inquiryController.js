@@ -22,6 +22,7 @@ const createInquiry = async (req, res) => {
       message,
     });
 
+    /*
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
@@ -37,6 +38,8 @@ const createInquiry = async (req, res) => {
         <p>${message}</p>
       `,
     });
+    
+    */
 
     res.status(201).json({
       success: true,
