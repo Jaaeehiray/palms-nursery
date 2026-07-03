@@ -24,7 +24,11 @@ transporter.verify(function (error, success) {
 
 const createInquiry = async (req, res) => {
   try {
+    console.log("Request received");
+
     const { name, email, phone, message } = req.body;
+
+    console.log("Saving to MongoDB...");
 
     const inquiry = await Inquiry.create({
       name,
@@ -33,7 +37,10 @@ const createInquiry = async (req, res) => {
       message,
     });
 
-    
+    console.log("Saved Successfully");
+
+    console.log("Sending Email...");
+
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
@@ -44,13 +51,11 @@ const createInquiry = async (req, res) => {
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Message:</strong></p>
-
-        <p>${message}</p>
+        <p><strong>Message:</strong> ${message}</p>
       `,
     });
-    
-  
+
+    console.log("Email Sent");
 
     res.status(201).json({
       success: true,
@@ -59,15 +64,15 @@ const createInquiry = async (req, res) => {
     });
 
   } catch (error) {
+    console.error("FULL ERROR:");
     console.error(error);
 
     res.status(500).json({
       success: false,
-      message: "Server Error",
+      message: error.message,
     });
   }
 };
-
 module.exports = {
   createInquiry,
 };
