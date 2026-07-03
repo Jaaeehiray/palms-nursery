@@ -2,9 +2,7 @@ const Inquiry = require("../models/Inquiry");
 const nodemailer = require("nodemailer");
 
 const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false, // Use TLS
+  service: "gmail",
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
@@ -22,7 +20,6 @@ const createInquiry = async (req, res) => {
       message,
     });
 
-    
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
@@ -38,8 +35,6 @@ const createInquiry = async (req, res) => {
         <p>${message}</p>
       `,
     });
-    
-  
 
     res.status(201).json({
       success: true,
