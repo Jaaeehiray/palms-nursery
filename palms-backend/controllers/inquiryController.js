@@ -1,20 +1,10 @@
 const Inquiry = require("../models/Inquiry");
-const nodemailer = require("nodemailer");
-
-const transporter = nodemailer.createTransport({
-  host: "smtp-relay.brevo.com",
-  port: 587,
-  secure: false,
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-});
 
 const createInquiry = async (req, res) => {
   try {
     const { name, email, phone, message } = req.body;
 
+    // Save inquiry to MongoDB
     const inquiry = await Inquiry.create({
       name,
       email,
@@ -22,21 +12,7 @@ const createInquiry = async (req, res) => {
       message,
     });
 
-    await transporter.sendMail({
-      from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER,
-      subject: "🌿 New Inquiry - PALMS Nursery Website",
-      html: `
-        <h2>New Customer Inquiry</h2>
-
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Message:</strong></p>
-
-        <p>${message}</p>
-      `,
-    });
+    console.log("✅ Inquiry saved to MongoDB");
 
     res.status(201).json({
       success: true,
@@ -45,7 +21,7 @@ const createInquiry = async (req, res) => {
     });
 
   } catch (error) {
-    console.error(error);
+    console.error("❌ Database Error:", error);
 
     res.status(500).json({
       success: false,
