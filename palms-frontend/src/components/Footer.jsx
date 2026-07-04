@@ -69,7 +69,7 @@ function Footer() {
 
           <p><FaPhoneAlt /> +91 9665093085</p>
 
-          <p><FaEnvelope /> jaaeehiray7@gmail.com</p>
+          <p><FaEnvelope /> palmsnursery15@gmail.com</p>
 
           <p><FaMapMarkerAlt /> Malegaon-Satana road, Chinchawad, fata, Aghar Bk, Malegaon, Maharashtra 423201</p>
 

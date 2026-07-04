@@ -91,8 +91,8 @@ const handleSubmit = async (e) => {
             <FaEnvelope className="info-icon"/>
             <div>
               <h3>Email</h3>
-              <a href="mailto:jaaeehiray7@gmail.com">
-                jaaeehiray7@gmail.com
+              <a href="mailto:palmsnursery15@gmail.com">
+                palmsnursery15@gmail.com
               </a>
             </div>
           </div>
