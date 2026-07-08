@@ -132,7 +132,7 @@
 
     .why-section{
         grid-template-columns: 1fr;
-        padding: 50px 20px;
+        padding: 30px 20px;
         gap: 35px;
     }
 
