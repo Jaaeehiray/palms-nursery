@@ -10,6 +10,14 @@ style={{
 backgroundImage:`linear-gradient(rgba(22,95,40,.65),rgba(22,95,40,.65)), url(${heroImage})`
 }}
     >
+
+      {/* Large Logo */}
+    <img
+      src="/logo.png"
+      alt="Palms Nursery Logo"
+      className="hero-logo"
+    />   
+    
       <div className="overlay">
         <div className="hero-content">
           <h1>PALMS Nursery & Landscapers</h1>
