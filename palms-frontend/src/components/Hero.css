@@ -18,9 +18,10 @@
 }
 
 .hero-logo {
-  width: 180px;      /* Desktop size */
+ max-width:1000px;     /* Desktop size */
   height: auto;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
+  logo-align:center;
 }
 
 .hero-content{
@@ -85,6 +86,7 @@
   .hero-logo {
     width: 140px;
     margin-bottom: 20px;
+    logo-align:center;
   }
 }
 
@@ -97,6 +99,7 @@
  .hero-logo {
     width: 110px;
     margin-bottom: 15px;
+    logo-align:center;
   }
 
 
