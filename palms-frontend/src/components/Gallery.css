@@ -1,106 +1,89 @@
 .gallery{
-
-padding:40px 8%;
-
-background:#bce5b58e;
-
-text-align:center;
-
+    padding:70px 80px;
+    background:#bce5b58e;
+    text-align:center;
 }
 
 .gallery h4{
-
-color:#2E7D32;
-
-margin-bottom:10px;
-font-weight:400;
-
+    color:#2E7D32;
+    margin-bottom:10px;
+    font-weight:400;
+    font-size:22px;
 }
 
 .gallery h2{
-
-font-size:43px;
-
-color:#570d0d;
-
-margin-bottom:50px;
-font-weight:600;
-
+    font-size:43px;
+    color:#570d0d;
+    margin-bottom:50px;
+    font-weight:600;
 }
 
 .gallery-grid{
-
-display:grid;
-
-grid-template-columns:repeat(4,1fr);
-
-gap:20px;
-
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
 }
 
 .gallery-item{
-
-overflow:hidden;
-
-border-radius:15px;
-
-box-shadow:0 5px 20px rgba(0,0,0,.15);
-
-cursor:pointer;
-
+    overflow:hidden;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+    cursor:pointer;
 }
 
 .gallery-item img{
-
-width:100%;
-
-height:280px;
-
-object-fit:cover;
-
-transition:.4s;
-
-display:block;
-
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    transition:.4s;
+    display:block;
 }
 
 .gallery-item:hover img{
+    transform:scale(1.08);
+}
 
-transform:scale(1.08);
+/* Tablet */
+
+@media (max-width:992px){
+
+    .gallery{
+        padding:60px 40px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:18px;
+    }
 
 }
 
-@media(max-width:992px){
+/* Mobile */
 
-.gallery-grid{
+@media (max-width:768px){
 
-grid-template-columns:repeat(2,1fr);
+    .gallery{
+        padding:50px 20px;
+    }
 
-}
+    .gallery h4{
+        font-size:18px;
+    }
 
-}
+    .gallery h2{
+        font-size:2rem;
+        margin-bottom:35px;
+        font-weight:600;
+    }
 
-@media(max-width:768px){
+    .gallery-grid{
+        grid-template-columns:1fr;
+        gap:18px;
+        padding:0;
+    }
 
-.gallery{
-
-padding:10px 40px;
-
-}
-
-.gallery h2{
-
-font-size:32px;
-font-weight:550;
-
-}
-
-.gallery-grid{
-
-grid-template-columns:1fr;
-padding:0px 30px;
-
-
-}
+    .gallery-item img{
+        height:240px;
+    }
 
 }
