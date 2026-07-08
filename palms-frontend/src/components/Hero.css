@@ -17,7 +17,7 @@
   align-items:center;
 }
 
-.hero-logo{
+.logo img{
   width:500px;      /* Adjust between 300px–500px as needed */
   max-width:90%;
   height:auto;
@@ -94,7 +94,7 @@
         min-height:90vh;
     }
 
-    .hero-logo{
+    .logo img{
         width:220px;
         max-width:80%;
         margin:0 auto 20px;
@@ -123,7 +123,7 @@
         padding:20px;
     }
 
-    .hero-logo{
+    .logo img{
         width:180px;
         max-width:70%;
         margin:0 auto 20px;
