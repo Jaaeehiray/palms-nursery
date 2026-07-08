@@ -1,6 +1,6 @@
 .why-section{
     width:100%;
-    padding: 30px 100px;
+    padding: 30px 70px;
     background:#bce5b58e;
 
     display:grid;
@@ -27,7 +27,7 @@
     color:#504f4f;
     line-height:1.8;
     margin-bottom:40px;
-    font-size:17px;
+    font-size:20px;
 }
 
 .why-grid{
