@@ -41,13 +41,16 @@
     gap:20px;
 }
 
-.info-box{
+..info-box{
     display:flex;
     gap:20px;
     padding:20px;
     background:#72cd975d;
     border-radius:15px;
     align-items:flex-start;
+
+    width:100%;
+    box-sizing:border-box;
 }
 
 .info-icon{
@@ -89,9 +92,11 @@
 }
 
 .contact-form{
+    width:100%;
     background:#72cd975d;
-    padding:35px;
+    padding:20px;
     border-radius:20px;
+    box-sizing:border-box;
 }
 
 .contact-form form{
@@ -146,7 +151,7 @@
 @media(max-width:768px){
 
 .contact{
-    padding:30px 50px;
+    padding:50px 16px;
 }
 
 .contact-title h2{
@@ -180,6 +185,12 @@
     width:100%;
     margin:0;
     box-sizing:border-box;
+}
+
+.contact-container,
+.contact-info,
+.contact-form{
+    width:100%;
 }
 
 }
