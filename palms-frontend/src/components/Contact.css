@@ -32,6 +32,7 @@
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:40px;
+    align-items:start;
 }
 
 .contact-info{
@@ -128,6 +129,12 @@
     background:#511d13;
 }
 
+.contact-info,
+.contact-form{
+    width:100%;
+    box-sizing:border-box;
+}
+
 @media(max-width:900px){
 
 .contact-container{
@@ -152,6 +159,27 @@
 
 .contact-form{
     padding:25px;
+}
+
+.contact-container{
+    width:100%;
+}
+
+.contact-info{
+    width:100%;
+}
+
+.contact-form{
+    width:100%;
+    margin:0;
+    padding:20px;
+    box-sizing:border-box;
+}
+
+.info-box{
+    width:100%;
+    margin:0;
+    box-sizing:border-box;
 }
 
 }
