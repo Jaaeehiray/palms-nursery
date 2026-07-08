@@ -13,12 +13,11 @@ backgroundImage:`linear-gradient(rgba(22,95,40,.65),rgba(22,95,40,.65)), url(${h
     >
 
       {/* Large Logo */}
-    <img
-      src="/logo.png"
-      alt="Palms Nursery Logo"
-      className="hero-logo"
-    />   
-
+      <div className="logo">
+              <img src={logo} alt="PALMS Nursery" />
+            </div>
+      
+   
       <div className="overlay">
         <div className="hero-content">
           <h1>PALMS Nursery & Landscapers</h1>
