@@ -41,7 +41,7 @@
     gap:20px;
 }
 
-..info-box{
+.info-box{
     display:flex;
     gap:20px;
     padding:20px;
